@@ -16,6 +16,7 @@ public class ShareScreenshot : MonoBehaviour {
 	{
 		// Salvar a tela dentro de uma texture
 		Texture2D tex = new Texture2D (Screen.width, Screen.height);
+        tex.Apply();
 		tex.ReadPixels (new Rect (0, 0, Screen.width, Screen.height), 0, 0);
 		// Salva a texture em um arquivo JPG
 		byte[] bytes = tex.EncodeToJPG();
